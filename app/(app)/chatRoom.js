@@ -116,6 +116,7 @@ export default function ChatRoom() {
                     <TextInput
                     ref={inputRef}
                     onChangeText={value=>textRef.current=value}
+                    color="black"
                     placeholder='Type message...'
                     style={{fontSize:hp(2)}}
                     className="flex-1 mr-2"

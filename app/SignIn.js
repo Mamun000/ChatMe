@@ -44,7 +44,7 @@ export default function SignIn() {
 
         const response = await login(emailRef.current, passwordRef.current);
         setLoading(false);
-        console.log('Sign in response', response);
+        //console.log('Sign in response', response);
         if (!response.success) {
             Alert.alert('Sign In', response.msg);
         }
@@ -230,7 +230,7 @@ export default function SignIn() {
                                     fontWeight: '600',
                                     color: '#6366f1'
                                 }}>
-                                    Forgot Password?
+                                    Forgot Password
                                 </Text>
                             </TouchableOpacity>
 

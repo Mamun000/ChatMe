@@ -34,7 +34,7 @@ export default function Home() {
   
 
 
-  console.log('user data: ',user)
+  //console.log('user data: ',user)
   return (
     <View className="flex-1 bg-white">
       <StatusBar style="light"/>{

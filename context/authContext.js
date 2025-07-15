@@ -15,7 +15,7 @@ export const AuthContextProvider = ({ children }) => {
         
 
         const unsub=onAuthStateChanged(auth,(user)=>{
-            console.log('got user',user);
+            //console.log('got user',user);
             if(user){
                 setIsAuthenticated(true);
                 setUser(user);
@@ -78,7 +78,7 @@ export const AuthContextProvider = ({ children }) => {
     const register= async(email,password,username,profileUrl) => {
         try{
             const response = await createUserWithEmailAndPassword(auth, email, password);
-            console.log('response.user :',response?.user);
+            //console.log('response.user :',response?.user);
             await setDoc(doc(db,"users",response?.user?.uid),{
                 username,
                 profileUrl,

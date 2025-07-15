@@ -11,38 +11,33 @@ import React from 'react';
 const ios = Platform.OS === 'ios';
 
 export default function CoustomKeyboardView({ children, inchat }) {
-  const keyboardVerticalOffset = inchat ? 90 : 0;
+  let kavConfig = {};
+  let scrollViewConfig = {};
+
+  if (inchat) {
+    kavConfig = { keyboardVerticalOffset: 90 };
+    scrollViewConfig = { contentContainerStyle: { flex: 1 } };
+  }
 
   return (
     <KeyboardAvoidingView
-      style={{ flex: 1 }}
       behavior={ios ? 'padding' : 'height'}
-      keyboardVerticalOffset={keyboardVerticalOffset}
+      style={{ flex: 1 }}
+      {...kavConfig}
     >
-      {
-        inchat ? (
-          // For in-chat, just use View + Touchable to dismiss
-          <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-            <View style={{ flex: 1 }}>
-              {children}
-            </View>
-          </TouchableWithoutFeedback>
-        ) : (
-          // For login/signup screens, ScrollView handles tap + keyboard
-          <ScrollView
-            contentContainerStyle={{ flexGrow: 1 }}
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            bounces={false}
-          >
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-              <View style={{ flex: 1 }}>
-                {children}
-              </View>
-            </TouchableWithoutFeedback>
-          </ScrollView>
-        )
-      }
+      <ScrollView
+        style={{ flex: 1 }}
+        keyboardShouldPersistTaps="handled"
+        bounces={false}
+        showsVerticalScrollIndicator={false}
+        {...scrollViewConfig}
+      >
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <View style={{ flex: 1 }}>
+            {children}
+          </View>
+        </TouchableWithoutFeedback>
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 }
