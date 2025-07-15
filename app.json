@@ -4,7 +4,7 @@
     "slug": "chatme",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/image.png",
     "scheme": "chatme",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
