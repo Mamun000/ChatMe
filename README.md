@@ -1,3 +1,5 @@
+📲 Download link https://expo.dev/accounts/skmamun/projects/chatme/builds/4394a9b7-2c9f-49aa-a3bc-84a10e3b0e7d
+
 🚀 ChatMe
 
 A modern, secure, and beautifully animated chat app built with React Native.
