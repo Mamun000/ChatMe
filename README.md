@@ -4,7 +4,7 @@ A modern, secure, and beautifully animated chat app built with React Native.
 
 📸 Screenshots
 Home
-<img width="828" height="1766" alt="1" src="https://github.com/user-attachments/assets/e06a4523-0ef9-4fc0-82d7-a1ff639f2479" />
+<img width="600" height="800" alt="1" src="https://github.com/user-attachments/assets/e06a4523-0ef9-4fc0-82d7-a1ff639f2479" />
 
 Sign In 
 <img width="818" height="1748" alt="signin" src="https://github.com/user-attachments/assets/0045da14-b4f9-478b-a3ee-f7e3927b8e71" />
